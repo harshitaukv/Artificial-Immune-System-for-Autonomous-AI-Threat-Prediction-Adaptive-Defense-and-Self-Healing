@@ -1,5 +1,3 @@
-# AstraSec
-
 **An Artificial Immune System for Autonomous AI Threat Prediction, Adaptive Defense and Self-Healing**
 
 Department of Computer Science and Engineering
