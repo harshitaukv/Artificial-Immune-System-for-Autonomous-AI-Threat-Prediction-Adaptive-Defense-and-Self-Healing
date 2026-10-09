@@ -13,7 +13,7 @@ Sri Manakula Vinayagar Engineering College (Autonomous)
 
 ## What this is
 
-**AstraSec: An Adaptive AI & Application Security Framework for Intelligent
+An Adaptive AI & Application Security Framework for Intelligent
 Threat Detection, Prompt Analysis, Document Inspection, Adaptive Defense and
 Security Monitoring.**
 
