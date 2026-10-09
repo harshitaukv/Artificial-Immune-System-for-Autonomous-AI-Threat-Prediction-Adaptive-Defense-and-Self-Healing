@@ -1,0 +1,59 @@
+
+==============================================================================
+AstraSec — evaluation suite
+==============================================================================
+Corpus 30,750 | train 25,434 | test 5,316 (template-disjoint)
+
+------------------------------------------------------------------------------
+Module 3 — classification
+------------------------------------------------------------------------------
+   ml_only   accuracy 0.9193  macro-F1 0.9112
+   fused     accuracy 0.9810  macro-F1 0.9813
+   figure -> confusion_ml_only.png
+   figure -> confusion_fused.png
+   figure -> module3_per_class.png
+
+------------------------------------------------------------------------------
+Module 1 — unsupervised novelty detection
+------------------------------------------------------------------------------
+   figure -> module1_behavior_curves.png
+   ROC-AUC 0.8947  PR-AUC 0.9476
+   mean anomaly — benign 0.158, attack 0.510
+
+------------------------------------------------------------------------------
+Ablation study
+------------------------------------------------------------------------------
+   Innate signatures only (no ML)                 acc 0.7150  F1 0.7447
+   Word TF-IDF + LogisticRegression               acc 0.8616  F1 0.8358
+   Char TF-IDF + LogisticRegression               acc 0.8997  F1 0.8766
+   Engineered features only + RandomForest        acc 0.8378  F1 0.8392
+   Full ensemble (word + char + dense)            acc 0.9191  F1 0.9109
+   Full ensemble + innate fusion (deployed)       acc 0.9814  F1 0.9817
+   figure -> ablation_study.png
+
+------------------------------------------------------------------------------
+End-to-end pipeline
+------------------------------------------------------------------------------
+   400 requests | 63 threats | 51 blocked | 17 sanitised | mean 52.5 ms
+   figure -> latency_benchmark.png
+   latency mean 52.5 ms | p95 75.0 ms | ~19 req/s single-threaded
+   figure -> traffic_composition.png
+
+------------------------------------------------------------------------------
+Red-team battery
+------------------------------------------------------------------------------
+   attacks detected 15/15 (100.0%) | exact class 100.0%
+   false positives  0/15 (0.0%)
+   evasive variants 5/5 detected | memory recall 20%
+
+------------------------------------------------------------------------------
+False-positive audit (hard negatives)
+------------------------------------------------------------------------------
+   0/15 hard negatives blocked (0.0%)
+
+==============================================================================
+Evaluation complete in 217.6s
+   report  -> /home/claude/astrasec/artifacts/reports/evaluation_report.json
+   figures -> /home/claude/astrasec/artifacts/figures
+==============================================================================
+

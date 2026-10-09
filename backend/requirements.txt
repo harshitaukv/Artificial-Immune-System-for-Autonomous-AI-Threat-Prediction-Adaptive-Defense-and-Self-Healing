@@ -1,0 +1,22 @@
+# AstraSec backend — pinned for reproducibility
+scikit-learn==1.8.0
+numpy==2.4.4
+pandas==3.0.2
+scipy==1.16.3
+joblib==1.5.2
+matplotlib==3.10.7
+pyarrow>=17.0.0
+
+fastapi==0.118.0
+uvicorn[standard]==0.37.0
+pydantic==2.12.0
+pydantic-settings==2.11.0
+httpx==0.28.1
+python-multipart==0.0.20
+websockets==15.0.1
+
+# Document parsing. Word, PowerPoint, Excel (.xlsx) and OpenDocument files are
+# read straight from their XML with the standard library, so they need nothing
+# here. Only these two formats need a package:
+pdfplumber==0.11.9     # PDF
+xlrd==2.0.1            # legacy Excel (.xls)

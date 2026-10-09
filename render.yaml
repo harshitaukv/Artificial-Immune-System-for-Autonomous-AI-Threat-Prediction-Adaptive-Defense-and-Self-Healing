@@ -1,0 +1,29 @@
+# Render blueprint — deploys the AstraSec backend as a single container.
+#
+#   1. Push this repo to GitHub
+#   2. Render dashboard -> New -> Blueprint -> pick the repo
+#   3. Copy the resulting URL into Vercel as VITE_API_BASE
+#
+# The free tier sleeps after 15 minutes of inactivity and takes ~40 s to wake.
+# Immune memory and tenant baselines are lost on sleep, exactly as they would
+# be on any restart — use the Starter tier for a demo that must stay warm.
+services:
+  - type: web
+    name: astrasec-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter          # "free" also works; see the note above
+    healthCheckPath: /api/health
+    envVars:
+      - key: ASTRASEC_ENVIRONMENT
+        value: production
+      # The dashboard's origin. Replace with your real Vercel URL — in
+      # production this is the entire CORS allow-list.
+      - key: ASTRASEC_CORS_ORIGINS
+        value: '["https://astrasec.vercel.app"]'
+      - key: ASTRASEC_LLM_PROVIDER
+        value: offline
+    disk:
+      name: astrasec-artifacts
+      mountPath: /app/artifacts
+      sizeGB: 1

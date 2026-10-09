@@ -1,0 +1,5 @@
+fastapi==0.110.0
+openai
+langchain==0.0.200
+chromadb>=0.4
+pyyaml==5.3.1

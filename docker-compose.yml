@@ -1,0 +1,36 @@
+services:
+  astrasec:
+    build: .
+    image: astrasec:1.0.0
+    container_name: astrasec
+    ports:
+      - "8000:8000"
+    environment:
+      # Module 5 recommendation engine. Leave as "offline" for the
+      # deterministic engine, or set to "ollama" and uncomment the service
+      # below to generate recommendations with Llama 3.1.
+      ASTRASEC_LLM_PROVIDER: "offline"
+      # ASTRASEC_LLM_PROVIDER: "ollama"
+      # ASTRASEC_LLM_BASE_URL: "http://ollama:11434"
+      # ASTRASEC_LLM_MODEL: "llama3.1"
+      ASTRASEC_ENVIRONMENT: "production"
+    volumes:
+      # Persist trained models, the SQLite audit log and immune memory.
+      - astrasec-artifacts:/app/artifacts
+    restart: unless-stopped
+
+  # Optional: local Llama 3.1 for Module 5's generative recommendations.
+  # Start with:  docker compose --profile llm up
+  ollama:
+    image: ollama/ollama:latest
+    container_name: astrasec-ollama
+    profiles: ["llm"]
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-models:/root/.ollama
+    restart: unless-stopped
+
+volumes:
+  astrasec-artifacts:
+  ollama-models:

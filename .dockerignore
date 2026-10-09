@@ -1,0 +1,13 @@
+**/node_modules
+**/dist
+**/__pycache__
+**/.pytest_cache
+artifacts/models
+artifacts/datasets
+artifacts/figures
+artifacts/reports
+artifacts/*.db*
+.git
+.venv
+venv
+docs/figures

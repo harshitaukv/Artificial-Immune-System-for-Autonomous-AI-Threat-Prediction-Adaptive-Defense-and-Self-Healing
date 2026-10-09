@@ -1,0 +1,35 @@
+# Hugging Face Spaces variant — free, Docker-based, keeps a warm process.
+# Copy this to the Space repo root as `Dockerfile`.
+FROM node:22-slim AS frontend
+WORKDIR /build
+COPY frontend/package.json ./
+RUN npm install --no-audit --no-fund
+COPY frontend/ ./
+RUN npm run build
+
+FROM python:3.11-slim AS runtime
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1 \
+    ASTRASEC_ARTIFACTS=/app/artifacts \
+    ASTRASEC_ENVIRONMENT=production
+
+WORKDIR /app
+RUN apt-get update && apt-get install -y --no-install-recommends curl \
+ && rm -rf /var/lib/apt/lists/*
+
+COPY backend/requirements.txt ./backend/requirements.txt
+RUN pip install -r backend/requirements.txt
+
+COPY backend/ ./backend/
+COPY --from=frontend /build/dist ./frontend/dist
+
+# Train at build time so the Space starts ready to serve.
+RUN cd backend && python -m astrasec.train --samples 30000 --cv 0
+
+# Spaces runs as uid 1000 and expects the app on port 7860.
+RUN useradd -m -u 1000 user && chown -R user:user /app
+USER user
+EXPOSE 7860
+WORKDIR /app/backend
+CMD ["python", "-m", "uvicorn", "astrasec.api:app", "--host", "0.0.0.0", "--port", "7860"]

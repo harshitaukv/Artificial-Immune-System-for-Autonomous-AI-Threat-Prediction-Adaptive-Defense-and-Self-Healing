@@ -1,0 +1,443 @@
+{
+  "trained_at": 1790085916.90821,
+  "duration_seconds": 166.09,
+  "split_protocol": "disjoint",
+  "dataset": {
+    "total": 30750,
+    "per_class": {
+      "benign": 12750,
+      "jailbreak": 4500,
+      "prompt_injection": 4500,
+      "adversarial_obfuscation": 3600,
+      "data_exfiltration": 3300,
+      "model_extraction": 2100
+    },
+    "per_template": {
+      "BN-19": 1018,
+      "BN-29": 880,
+      "BN-34": 704,
+      "BN-28": 612,
+      "BN-37": 547,
+      "BN-02": 505,
+      "BN-06": 495,
+      "BN-31": 482,
+      "BN-01": 464,
+      "BN-40": 447,
+      "JB-05": 446,
+      "BN-04": 427,
+      "DX-16": 370,
+      "BN-16": 335,
+      "BN-32": 302,
+      "BN-LT-CODE": 294,
+      "BN-33": 293,
+      "JB-02": 285,
+      "JB-20": 285,
+      "BN-35": 282,
+      "JB-16": 277,
+      "JB-19": 276,
+      "BN-15": 275,
+      "DX-05": 264,
+      "JB-01": 252,
+      "BN-27": 250,
+      "BN-36": 244,
+      "AD-08": 241,
+      "PI-03": 236,
+      "BN-LT-I18N": 235,
+      "BN-20": 235,
+      "AD-05": 233,
+      "PI-07": 233,
+      "AD-10": 231,
+      "PI-16": 231,
+      "BN-26": 231,
+      "BN-10": 230,
+      "BN-38": 228,
+      "BN-17": 228,
+      "JB-11": 228,
+      "BN-18": 228,
+      "PI-19": 228,
+      "PI-01": 228,
+      "JB-09": 227,
+      "PI-05": 227,
+      "PI-18": 226,
+      "BN-08": 224,
+      "JB-03": 222,
+      "PI-15": 222,
+      "PI-08": 222,
+      "BN-LT-LONG": 221,
+      "ME-04": 221,
+      "PI-04": 221,
+      "JB-21": 220,
+      "JB-12": 219,
+      "PI-20": 219,
+      "BN-07": 219,
+      "BN-25": 214,
+      "BN-39": 213,
+      "AD-12": 212,
+      "BN-09": 209,
+      "ME-08": 207,
+      "PI-21": 207,
+      "ME-12": 206,
+      "PI-12": 200,
+      "JB-17": 199,
+      "AD-01": 198,
+      "PI-10": 197,
+      "BN-30": 194,
+      "AD-16": 191,
+      "AD-06": 190,
+      "AD-17": 186,
+      "AD-15": 185,
+      "AD-18": 183,
+      "PI-17": 182,
+      "BN-03": 182,
+      "PI-23": 181,
+      "AD-04": 180,
+      "DX-08": 180,
+      "AD-19": 179,
+      "ME-05": 179,
+      "AD-03": 179,
+      "JB-13": 179,
+      "DX-11": 174,
+      "PI-13": 174,
+      "AD-09": 174,
+      "AD-13": 173,
+      "AD-14": 171,
+      "ME-03": 169,
+      "PI-06": 168,
+      "AD-11": 167,
+      "AD-02": 166,
+      "ME-07": 166,
+      "ME-09": 165,
+      "PI-02": 165,
+      "DX-19": 164,
+      "DX-06": 162,
+      "DX-15": 161,
+      "AD-07": 161,
+      "BN-11": 160,
+      "ME-06": 158,
+      "DX-14": 157,
+      "JB-07": 156,
+      "DX-20": 155,
+      "DX-17": 155,
+      "DX-07": 150,
+      "DX-02": 147,
+      "DX-01": 147,
+      "DX-04": 146,
+      "PI-09": 146,
+      "ME-14": 145,
+      "DX-09": 143,
+      "JB-10": 141,
+      "ME-01": 138,
+      "DX-18": 137,
+      "JB-22": 136,
+      "JB-08": 134,
+      "PI-22": 133,
+      "DX-03": 132,
+      "JB-06": 132,
+      "DX-10": 131,
+      "PI-11": 128,
+      "JB-15": 126,
+      "PI-14": 126,
+      "JB-04": 126,
+      "ME-15": 119,
+      "JB-14": 117,
+      "JB-18": 117,
+      "DX-12": 114,
+      "DX-13": 111,
+      "ME-02": 82,
+      "BN-14": 68,
+      "BN-22": 64,
+      "BN-05": 63,
+      "BN-24": 58,
+      "BN-21": 55,
+      "ME-11": 53,
+      "ME-13": 52,
+      "BN-23": 49,
+      "BN-13": 46,
+      "BN-12": 40,
+      "ME-10": 40
+    },
+    "hard_negatives": 2611,
+    "obfuscated": 1982,
+    "mean_length": 110.0,
+    "build_seconds": 5.438,
+    "seed": 42,
+    "checksum": "ba09e8b9e3353b26",
+    "n_templates": 139
+  },
+  "dataset_size": 30750,
+  "train_size": 24121,
+  "test_size": 6629,
+  "class_distribution": {
+    "benign": 12750,
+    "jailbreak": 4500,
+    "prompt_injection": 4500,
+    "adversarial_obfuscation": 3600,
+    "data_exfiltration": 3300,
+    "model_extraction": 2100
+  },
+  "module1_behavior": {
+    "training_size": 9743.0,
+    "threshold_raw": 3.161126959153049e-18,
+    "scale": 0.04033951581085049,
+    "benign_mean_anomaly": 0.19165253354991962,
+    "benign_p95_anomaly": 0.5917871735901433,
+    "flag_rate_on_benign": 0.08005747716309145,
+    "fit_seconds": 3.518690199998673,
+    "test_auc": 0.8954850792656266
+  },
+  "module3_ml_only": {
+    "accuracy": 0.9518781113290089,
+    "macro_f1": 0.9431999315022489,
+    "weighted_f1": 0.9511959121902641,
+    "per_class": {
+      "adversarial_obfuscation": {
+        "precision": 0.9986263736263736,
+        "recall": 0.9167717528373266,
+        "f1-score": 0.9559500328731098,
+        "support": 793.0
+      },
+      "benign": {
+        "precision": 0.9570337364735837,
+        "recall": 1.0,
+        "f1-score": 0.9780452106033501,
+        "support": 3007.0
+      },
+      "data_exfiltration": {
+        "precision": 0.9960474308300395,
+        "recall": 0.8168557536466775,
+        "f1-score": 0.8975957257346393,
+        "support": 617.0
+      },
+      "jailbreak": {
+        "precision": 0.8571428571428571,
+        "recall": 0.9925925925925926,
+        "f1-score": 0.919908466819222,
+        "support": 810.0
+      },
+      "model_extraction": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 378.0
+      },
+      "prompt_injection": {
+        "precision": 0.9498399146211313,
+        "recall": 0.869140625,
+        "f1-score": 0.9077001529831719,
+        "support": 1024.0
+      },
+      "macro avg": {
+        "precision": 0.959781718782331,
+        "recall": 0.9325601206794327,
+        "f1-score": 0.9431999315022489,
+        "support": 6629.0
+      },
+      "weighted avg": {
+        "precision": 0.9547736025858603,
+        "recall": 0.9518781113290089,
+        "f1-score": 0.9511959121902641,
+        "support": 6629.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        727,
+        62,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        3007,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        70,
+        504,
+        0,
+        0,
+        42
+      ],
+      [
+        0,
+        3,
+        0,
+        804,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        378,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        134,
+        0,
+        890
+      ]
+    ],
+    "labels": [
+      "adversarial_obfuscation",
+      "benign",
+      "data_exfiltration",
+      "jailbreak",
+      "model_extraction",
+      "prompt_injection"
+    ]
+  },
+  "module3_fused": {
+    "accuracy": 0.9755619248755468,
+    "macro_f1": 0.9702942524048429,
+    "weighted_f1": 0.9752735556239719,
+    "per_class": {
+      "adversarial_obfuscation": {
+        "precision": 1.0,
+        "recall": 0.9798234552332913,
+        "f1-score": 0.9898089171974522,
+        "support": 793.0
+      },
+      "benign": {
+        "precision": 0.9791598827743406,
+        "recall": 1.0,
+        "f1-score": 0.989470220467259,
+        "support": 3007.0
+      },
+      "data_exfiltration": {
+        "precision": 0.9944649446494465,
+        "recall": 0.873581847649919,
+        "f1-score": 0.9301121656600517,
+        "support": 617.0
+      },
+      "jailbreak": {
+        "precision": 0.9284064665127021,
+        "recall": 0.9925925925925926,
+        "f1-score": 0.9594272076372315,
+        "support": 810.0
+      },
+      "model_extraction": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 378.0
+      },
+      "prompt_injection": {
+        "precision": 0.9668341708542714,
+        "recall": 0.939453125,
+        "f1-score": 0.9529470034670628,
+        "support": 1024.0
+      },
+      "macro avg": {
+        "precision": 0.9781442441317935,
+        "recall": 0.9642418367459671,
+        "f1-score": 0.9702942524048429,
+        "support": 6629.0
+      },
+      "weighted avg": {
+        "precision": 0.9761602152935908,
+        "recall": 0.9755619248755468,
+        "f1-score": 0.9752735556239719,
+        "support": 6629.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        777,
+        0,
+        3,
+        0,
+        0,
+        13
+      ],
+      [
+        0,
+        3007,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        61,
+        539,
+        0,
+        0,
+        17
+      ],
+      [
+        0,
+        3,
+        0,
+        804,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        378,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        62,
+        0,
+        962
+      ]
+    ],
+    "labels": [
+      "adversarial_obfuscation",
+      "benign",
+      "data_exfiltration",
+      "jailbreak",
+      "model_extraction",
+      "prompt_injection"
+    ]
+  },
+  "module3_training": {
+    "training_size": 24121.0,
+    "n_features": 44090.0,
+    "svd_components": 300.0,
+    "svd_explained_variance": 0.7664266626495081,
+    "fit_seconds": 46.64868809998734
+  },
+  "cv_macro_f1": [
+    0.9998852682106483,
+    1.0,
+    0.9998852603113826
+  ],
+  "cv_mean": 0.9999235095073437,
+  "cv_std": 5.408694614976641e-05,
+  "model_paths": {
+    "behavior": "C:\\Users\\Harshita\\Downloads\\astrasec_2\\astrasec\\artifacts\\models\\behavior_engine.joblib",
+    "prediction": "C:\\Users\\Harshita\\Downloads\\astrasec_2\\astrasec\\artifacts\\models\\threat_prediction.joblib",
+    "memory": "C:\\Users\\Harshita\\Downloads\\astrasec_2\\astrasec\\artifacts\\models\\immune_memory.joblib"
+  },
+  "settings": {
+    "iforest_n_estimators": 150,
+    "rf_n_estimators": 400,
+    "ensemble_weights": {
+      "random_forest": 0.55,
+      "logistic_regression": 0.45
+    },
+    "prediction_threshold": 0.45,
+    "random_seed": 42
+  }
+}
