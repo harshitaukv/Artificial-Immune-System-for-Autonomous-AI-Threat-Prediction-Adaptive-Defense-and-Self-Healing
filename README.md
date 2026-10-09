@@ -15,7 +15,7 @@ Sri Manakula Vinayagar Engineering College (Autonomous)
 
 An Adaptive AI & Application Security Framework for Intelligent
 Threat Detection, Prompt Analysis, Document Inspection, Adaptive Defense and
-Security Monitoring.**
+Security Monitoring.
 
 AstraSec is one security platform built around a protected chatbot. Every
 message and file a user sends to **AstraBot** goes through the AstraSec
