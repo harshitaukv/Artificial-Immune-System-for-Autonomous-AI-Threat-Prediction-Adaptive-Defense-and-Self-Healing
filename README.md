@@ -1,6 +1,6 @@
 An Artificial Immune System for Autonomous AI Threat Prediction, Adaptive Defense and Self-Healing
 
-Department of Computer Science and Engineering
+Department of Computer Science and Engineering |
 Sri Manakula Vinayagar Engineering College (Autonomous)
 
 | | |
